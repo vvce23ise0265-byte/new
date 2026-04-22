@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'Docker-credentials'
-        IMAGE_NAME = 'shilpakevala/new_docker_image'
+        IMAGE_NAME = 'sinchanabm/new_docker_image'
     }
 
     stages {
@@ -29,7 +29,7 @@ pipeline {
         stage('Login to DockerHub') {
             steps {
                 withCredentials([usernamePassword(
-                credentialsId: 'Docker-credentials',
+                credentialsId: 'sinchanabm',
                 usernameVariable: 'USER',
                 passwordVariable: 'PASS')]) {
 
